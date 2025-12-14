@@ -7,7 +7,7 @@ My personal CV built with [Typst](https://typst.app/), a modern typesetting syst
 | File | Description |
 |------|-------------|
 | `cv.typ` | Source file (Typst markup) |
-| `cv.pdf` | Compiled PDF (auto-generated) |
+| `Mateo_Maccarone_CV.pdf` | Compiled PDF (auto-generated) |
 
 ## 🚀 Quick Start
 
