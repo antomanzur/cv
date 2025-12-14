@@ -21,13 +21,13 @@ jobs:
         uses: typst-community/setup-typst@v4
 
       - name: Compile CV to PDF
-        run: typst compile cv.typ cv.pdf
+        run: typst compile cv.typ Mateo_Maccarone_CV.pdf
 
       - name: Commit and push PDF
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add cv.pdf
-          git diff --staged --quiet || git commit -m "🔄 Auto-build: Update cv.pdf"
+          git add Mateo_Maccarone_CV.pdf
+          git diff --staged --quiet || git commit -m "🔄 Auto-builb: Update CV"
           git push
 
