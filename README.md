@@ -1,4 +1,4 @@
-# CV - Mateo Maccarone
+# CV - Antonella Manzur
 
 My personal CV built with [Typst](https://typst.app/), a modern typesetting system.
 
@@ -8,7 +8,7 @@ My personal CV built with [Typst](https://typst.app/), a modern typesetting syst
 |------|-------------|
 | `cv.typ` | Template file (Typst markup) |
 | `cv-data.yml` | CV content (YAML data) |
-| `Mateo_Maccarone_CV.pdf` | Compiled PDF (auto-generated) |
+| `Antonella_Manzur_CV.pdf` | Compiled PDF (auto-generated) |
 
 ## 🏗️ Architecture
 
