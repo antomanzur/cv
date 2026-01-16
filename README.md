@@ -6,8 +6,32 @@ My personal CV built with [Typst](https://typst.app/), a modern typesetting syst
 
 | File | Description |
 |------|-------------|
-| `cv.typ` | Source file (Typst markup) |
+| `cv.typ` | Template file (Typst markup) |
+| `cv-data.yml` | CV content (YAML data) |
 | `Mateo_Maccarone_CV.pdf` | Compiled PDF (auto-generated) |
+
+## 🏗️ Architecture
+
+This CV separates **content** from **presentation**:
+
+- **`cv-data.yml`** - Contains all the text content (personal info, experience, skills, etc.)
+- **`cv.typ`** - Contains the layout and styling logic
+
+To update your CV content, edit `cv-data.yml`. To change the design, edit `cv.typ`.
+
+### YAML Structure
+
+```yaml
+document:       # PDF metadata
+personal:       # Name, title, contact info, links
+summary:        # Professional summary paragraph
+skills:         # Technical skills by category
+experience:     # Professional experience
+additional_experience:  # Other relevant experience
+education:      # Academic background
+open_source_interests:  # Hobbies and interests
+languages:      # Language proficiencies
+```
 
 ## 🚀 Quick Start
 
@@ -31,7 +55,7 @@ typst compile cv.typ
 
 1. Go to [typst.app](https://typst.app/)
 2. Create a new project
-3. Copy the contents of `cv.typ`
+3. Upload both `cv.typ` and `cv-data.yml`
 4. The PDF will render automatically
 
 ### Option 3: VS Code
@@ -45,7 +69,7 @@ typst compile cv.typ
 This repository includes a GitHub Action that automatically compiles `cv.typ` to `cv.pdf` whenever changes are pushed to the `main` branch.
 
 **How it works:**
-1. Push changes to `cv.typ`
+1. Push changes to `cv.typ` or `cv-data.yml`
 2. GitHub Actions runs `typst compile cv.typ cv.pdf`
 3. The updated PDF is committed back to the repository
 
@@ -56,7 +80,7 @@ This repository includes a GitHub Action that automatically compiles `cv.typ` to
 
 ### Change Colors
 
-Edit the accent colors at the top of `cv.typ`:
+Edit the accent colors in `cv.typ`:
 
 ```typst
 #let accent = rgb("#2563eb")  // Section titles & lines
@@ -85,6 +109,11 @@ Popular alternatives: `"IBM Plex Sans"`, `"Source Sans Pro"`, `"Fira Sans"`
 )
 ```
 
+### Add New Sections
+
+1. Add the data to `cv-data.yml`
+2. Add the rendering logic to `cv.typ` using the existing patterns
+
 ## 📚 Resources
 
 - [Typst Documentation](https://typst.app/docs/)
@@ -94,4 +123,3 @@ Popular alternatives: `"IBM Plex Sans"`, `"Source Sans Pro"`, `"Fira Sans"`
 ## 📝 License
 
 Feel free to use this template for your own CV.
-
