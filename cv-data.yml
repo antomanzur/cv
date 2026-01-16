@@ -1,68 +1,108 @@
-# CV Data - Mateo Maccarone
+# CV Data - Antonella Manzur
 
 document:
-  title: "Mateo Maccarone - CV"
-  author: "Mateo Maccarone"
+  title: "Antonella Manzur - CV"
+  author: "Antonella Manzur"
 
 personal:
-  name: "Mateo Maccarone"
-  title: "Lead Frontend Developer"
-  email: "maccaronemateo.dev@gmail.com"
+  name: "Antonella Manzur"
+  title: "Technical Leader"
+  email: "antonellamanzur@gmail.com"
   location: "Buenos Aires, Argentina"
-  linkedin: "https://www.linkedin.com/in/mateo-maccarone-a37313211/"
-  github: "https://github.com/Mattee37"
+  linkedin: "https://www.linkedin.com/in/antonella-manzur/"
+  github: "https://github.com/antomanzur"
 
 summary: |
-  JavaScript developer with 4+ years of professional experience (10+ years overall) building modern, scalable web applications. Currently leading frontend development at Braintly, where I modernized legacy systems using React, Next.js, and Laravel. Passionate about clean code, open source, performance, and mentoring. Actively expanding my expertise into Vue.js ecosystems.
+  With 9+ years of experience in the software industry, I’ve worked as a Software Engineer and Tech Lead, collaborating with a wide range of clients—from US-based startups to large corporate teams in Argentina.
+  
+  Over the past few years, my role has evolved beyond hands-on development into technical leadership and strategic decision-making, contributing directly to the core of the business. I’m actively involved in defining architectures, setting technical standards, mentoring engineers, and aligning technical solutions with product and business goals.
+
+  I’m known for being detail-oriented, highly organized, and a strong communicator, especially in cross-functional and bilingual environments. I value clean architecture, maintainable systems, and thoughtful technical decisions that scale over time.
+
+  I’m deeply committed to my work and strongly believe that a good team can achieve anything! 
 
 skills:
-  - category: "Frontend"
-    items: "React, Next.js, Astro, Vue, Nuxt, TypeScript"
-  - category: "State & Data"
-    items: "RPC and REST APIs"
+  - category: "Architecture & Design Patterns"
+    items: "Clean architecture, microservices, OOP, SOLID"
   - category: "Backend"
-    items: "Laravel, PostgreSQL"
+    items: "Laravel, PHP, Python, Django, FastAPI, NodeJS"
+  - category: "Frontend"
+    items: "React, Next.js, TypeScript, Ionic, Redux"
+  - category: "Databases"
+    items: "SQL, NoSQL, Firebase, MongoDB, MySQL, PosgreSQL"
   - category: "DevOps & Tools"
-    items: "Docker, Git, Bun, IA-Agents and MCPs"
+    items: "Docker, Git, IA-Agents and MCPs, AWS, GCP, Railway"
   - category: "Leadership"
-    items: "Technical ownership, code reviews, agile collaboration, cross-team alignment"
+    items: "Technical leader, decision making skills, code reviews, pair-programming, team player"
 
 experience:
   - company: "Braintly"
     company_url: "https://www.braintly.com/"
-    role: "Frontend Developer"
-    dates: "2021 – Present"
+    role: "Technical Leader"
+    dates: "2022 – Present"
     highlights:
-      - "Led the full migration of a legacy frontend to a modern React + Next.js architecture, significantly improving performance, maintainability, and developer experience."
-      - "Built responsive, accessible UIs with a focus on user experience and code quality."
-      - "Collaborated with backend engineers on Laravel APIs, ensuring seamless integration and efficient data flow."
-      - "Containerized local development environments using Docker to standardize workflows across the team."
-      - "Acted as a technical reference for frontend decisions and participated in architectural discussions."
+      - "Participated in strategic discussions as part of the core leadership group, contributing to key decisions impacting the company and its products."
+      - "Led and mentored developers across frontend and backend stacks, providing technical guidance, code reviews, and architectural support."
+      - "Worked directly with international clients, communicating technical solutions and trade-offs. Led a workshop with international clients in a process of discovery"
+      - "Promoted best practices around clean code, design patterns, and system organization across teams."
+      - "Supported DevOps and infrastructure initiatives, including Docker-based local environments and cloud deployments on AWS."
+      - "Played a key role in cross-project alignment, helping standardize tooling, workflows, and architectural approaches across the organization."
+      - "Led the migration of a large legacy monolithic backend (from Python 2.7 to Python 3.11) toward a microservices-based architecture, focusing on code quality, maintainability, and long-term scalability< applying modern best practices, improving system performance and reducing technical debt. Identified and addressed critical bottlenecks in database usage and cron jobs, improving execution times and system reliability. Improved system observability and visibility into failures by helping define better monitoring, logging, and error detection strategies."
+  - company: "Braintly"
+    company_url: "https://www.braintly.com/"
+    role: "FullStack Developer"
+    dates: "2020 – 2022"
+    highlights:
+      - "Worked building and maintaining complex systems related to personal credit products, involving business-critical logic and data validations."
+      - "Developed backend services using Laravel and frontend applications with React, ensuring robust communication between systems and reliable data handling."
+      - "Collaborated closely with product and business stakeholders to translate complex domain rules into maintainable technical solutions."
+      - "Joined a greenfield project built with TypeScript and Firebase Functions, initially working as the sole developer and taking full ownership of the system."
+      - "Scaled the codebase and architecture as the project grew, later onboarding and supporting additional developers joining the team."
+      - "Applied clean code principles and best practices to ensure long-term maintainability as systems evolved."
+  - company: "Trusted Translations"
+    role: "Website Developer"
+    dates: "September 2019 – March 2020"
+    highlights:
+      - "Developed and maintained marketing websites to promote the company’s translation services and commercial offerings."
+      - "Built responsive, user-friendly websites using JavaScript, PHP, and WordPress, focusing on usability and performance."
+      - "Collaborated with non-technical stakeholders to translate business needs into functional and visually clear web solutions."
+      - "Ensured content manageability and scalability by leveraging WordPress customization and best practices."
+  - company: "Dirección de Informática – Municipalidad de la Costa"
+    role: "Fullstack Developer"
+    dates: "May 2017 – September 2019"
+    location: "Partido de la Costa, Argentina"
+    highlights:
+      - "Developed internal web systems to support municipal operations, including payroll management, reporting requests, and administrative workflows."
+      - "Built and maintained applications for citizen services such as complaints management and ticketing systems."
+      - "Worked with JavaScript, PHP, MySQL, and React to deliver reliable and maintainable solutions for public-sector use cases."
+      - "Collaborated with internal teams to understand operational needs and translate them into practical software tools."
+      - "Contributed to improving process efficiency and system reliability in a high-usage public environment."
 
 additional_experience:
-  - company: "Municipalidad de Tres de Febrero – C.I.T y Empleabilidad"
-    role: "Web Development Instructor"
-    dates: "2020"
+  - company: "Universidad Atlántida Argentina"
+    role: "Arduino & Robotics Course Instructor"
+    dates: "2017"
     highlights:
-      - "Designed and delivered introductory web development workshops (HTML, CSS, JavaScript) to promote digital inclusion."
+      - "Designed and taught an introductory Arduino and robotics course for non-technical participants."
+      - "Developed course content and hands-on exercises tailored to beginners."
+  - company: "Universidad Atlántida Argentina"
+    role: "Teaching Assistant – Systems Design"
+    dates: "2017"
+    highlights:
+      - "Served as a teaching assistant for a university-level Systems Design course."
+      - "Supported students in understanding core software design concepts, architecture principles, and system modeling."
 
 education:
-  - degree: "University Technical Degree in Web Development"
-    institution: "UNLaM"
-    dates: "2025 – in progress"
-  - degree: "Computer Engineering"
-    institution: "UNLaM"
-    dates: "2021 – paused"
-  - degree: "Computer Science (Secondary)"
-    institution: "Instituto Agustín Elizalde (IAE)"
-    dates: "2014 – 2020"
+  - degree: "Informatics Engineering"
+    institution: "Universidad Atlántida Argentina"
+    dates: "2013 – 2019"
 
 open_source_interests:
-  - "Active on GitHub with personal experiments and open-source contributions"
-  - "Passionate about: Comics, Open Source, Led Zeppelin, and Thrash Metal"
+  - "Passionate about: Books (In general but Fantasy as a special place), music, video games, 3D printing, sports (specially water sports) and Pokémon"
+  - "Currently learning: RAG Architectures and LLM's"
 
 languages:
   - language: "Spanish"
     proficiency: "Native"
   - language: "English"
-    proficiency: "Professional working proficiency"
+    proficiency: "Advanced (C1)"
