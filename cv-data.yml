@@ -1,0 +1,68 @@
+# CV Data - Mateo Maccarone
+
+document:
+  title: "Mateo Maccarone - CV"
+  author: "Mateo Maccarone"
+
+personal:
+  name: "Mateo Maccarone"
+  title: "Lead Frontend Developer"
+  email: "maccaronemateo.dev@gmail.com"
+  location: "Buenos Aires, Argentina"
+  linkedin: "https://www.linkedin.com/in/mateo-maccarone-a37313211/"
+  github: "https://github.com/Mattee37"
+
+summary: |
+  JavaScript developer with 4+ years of professional experience (10+ years overall) building modern, scalable web applications. Currently leading frontend development at Braintly, where I modernized legacy systems using React, Next.js, and Laravel. Passionate about clean code, open source, performance, and mentoring. Actively expanding my expertise into Vue.js ecosystems.
+
+skills:
+  - category: "Frontend"
+    items: "React, Next.js, Astro, Vue, Nuxt, TypeScript"
+  - category: "State & Data"
+    items: "RPC and REST APIs"
+  - category: "Backend"
+    items: "Laravel, PostgreSQL"
+  - category: "DevOps & Tools"
+    items: "Docker, Git, Bun, IA-Agents and MCPs"
+  - category: "Leadership"
+    items: "Technical ownership, code reviews, agile collaboration, cross-team alignment"
+
+experience:
+  - company: "Braintly"
+    company_url: "https://www.braintly.com/"
+    role: "Frontend Developer"
+    dates: "2021 – Present"
+    highlights:
+      - "Led the full migration of a legacy frontend to a modern React + Next.js architecture, significantly improving performance, maintainability, and developer experience."
+      - "Built responsive, accessible UIs with a focus on user experience and code quality."
+      - "Collaborated with backend engineers on Laravel APIs, ensuring seamless integration and efficient data flow."
+      - "Containerized local development environments using Docker to standardize workflows across the team."
+      - "Acted as a technical reference for frontend decisions and participated in architectural discussions."
+
+additional_experience:
+  - company: "Municipalidad de Tres de Febrero – C.I.T y Empleabilidad"
+    role: "Web Development Instructor"
+    dates: "2020"
+    highlights:
+      - "Designed and delivered introductory web development workshops (HTML, CSS, JavaScript) to promote digital inclusion."
+
+education:
+  - degree: "University Technical Degree in Web Development"
+    institution: "UNLaM"
+    dates: "2025 – in progress"
+  - degree: "Computer Engineering"
+    institution: "UNLaM"
+    dates: "2021 – paused"
+  - degree: "Computer Science (Secondary)"
+    institution: "Instituto Agustín Elizalde (IAE)"
+    dates: "2014 – 2020"
+
+open_source_interests:
+  - "Active on GitHub with personal experiments and open-source contributions"
+  - "Passionate about: Comics, Open Source, Led Zeppelin, and Thrash Metal"
+
+languages:
+  - language: "Spanish"
+    proficiency: "Native"
+  - language: "English"
+    proficiency: "Professional working proficiency"

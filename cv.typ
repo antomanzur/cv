@@ -1,7 +1,10 @@
+// Load data from YAML
+#let data = yaml("cv-data.yml")
+
 // Document setup
 #set document(
-  title: "Mateo Maccarone - CV",
-  author: "Mateo Maccarone",
+  title: data.document.title,
+  author: data.document.author,
 )
 
 #set page(
@@ -28,11 +31,11 @@
   v(0.3em)
 }
 
-#let job(company, role, dates) = {
+#let job(company, role, dates, company_url: none) = {
   grid(
     columns: (1fr, auto),
     align: (left, right),
-    text(weight: "bold")[#company] + text(style: "italic")[ — #role],
+    text(weight: "bold")[#if company_url != none { link(company_url)[#company] } else { company }] + text(style: "italic")[ — #role],
     text(fill: muted)[#dates]
   )
 }
@@ -48,23 +51,23 @@
 
 // Header
 #align(center)[
-  #text(size: 24pt, weight: "bold")[Mateo Maccarone]
+  #text(size: 24pt, weight: "bold")[#data.personal.name]
   #v(-0.3em)
-  #text(size: 12pt, style: "italic", fill: muted)[Lead Frontend Developer]
+  #text(size: 12pt, style: "italic", fill: muted)[#data.personal.title]
   #v(0.3em)
   #text(size: 9pt)[
-    #link("mailto:maccaronemateo.dev@gmail.com")[maccaronemateo.dev\@gmail.com] #h(1em) | #h(1em) Buenos Aires, Argentina
+    #link("mailto:" + data.personal.email)[#data.personal.email] #h(1em) | #h(1em) #data.personal.location
   ]
   #v(0.1em)
   #text(size: 9pt)[
-    #link("https://www.linkedin.com/in/mateo-maccarone-a37313211/")[LinkedIn] #h(1em) | #h(1em) #link("https://github.com/Mattee37")[GitHub]
+    #link(data.personal.linkedin)[LinkedIn] #h(1em) | #h(1em) #link(data.personal.github)[GitHub]
   ]
 ]
 
 #v(0.8em)
 
 #text(size: 10pt)[
-  JavaScript developer with 4+ years of professional experience (10+ years overall) building modern, scalable web applications. Currently leading frontend development at #link("https://www.braintly.com/")[Braintly], where I modernized legacy systems using React, Next.js, and Laravel. Passionate about clean code, open source, performance, and mentoring. Actively expanding my expertise into Vue.js ecosystems.
+  #data.summary.trim()
 ]
 
 // Technical Skills
@@ -74,49 +77,47 @@
   columns: (auto, 1fr),
   column-gutter: 1em,
   row-gutter: 0.5em,
-  text(weight: "bold")[Frontend:], [React, Next.js, Astro, Vue, Nuxt, TypeScript],
-  text(weight: "bold")[State & Data:], [RPC and REST APIs],
-  text(weight: "bold")[Backend:], [Laravel, PostgreSQL],
-  text(weight: "bold")[DevOps & Tools:], [Docker, Git, Bun, IA-Agents and MCPs],
-  text(weight: "bold")[Leadership:], [Technical ownership, code reviews, agile collaboration, cross-team alignment],
+  ..data.skills.map(skill => (
+    text(weight: "bold")[#skill.category:],
+    [#skill.items]
+  )).flatten()
 )
 
 // Professional Experience
 #section-title("Professional Experience")
 
-#job(link("https://www.braintly.com/")[Braintly], "Frontend Developer", "2021 – Present")
-#v(0.3em)
-
-#list(
-  marker: [•],
-  indent: 0.5em,
-  [Led the full migration of a legacy frontend to a modern React + Next.js architecture, significantly improving performance, maintainability, and developer experience.],
-  [Built responsive, accessible UIs with a focus on user experience and code quality.],
-  [Collaborated with backend engineers on Laravel APIs, ensuring seamless integration and efficient data flow.],
-  [Containerized local development environments using Docker to standardize workflows across the team.],
-  [Acted as a technical reference for frontend decisions and participated in architectural discussions.],
-)
+#for exp in data.experience {
+  job(exp.company, exp.role, exp.dates, company_url: exp.at("company_url", default: none))
+  v(0.3em)
+  list(
+    marker: [•],
+    indent: 0.5em,
+    ..exp.highlights.map(h => [#h])
+  )
+}
 
 // Additional Experience
 #section-title("Additional Experience")
 
-#job("Municipalidad de Tres de Febrero – C.I.T y Empleabilidad", "Web Development Instructor", "2020")
-#v(0.3em)
-
-#list(
-  marker: [•],
-  indent: 0.5em,
-  [Designed and delivered introductory web development workshops (HTML, CSS, JavaScript) to promote digital inclusion.],
-)
+#for exp in data.additional_experience {
+  job(exp.company, exp.role, exp.dates, company_url: exp.at("company_url", default: none))
+  v(0.3em)
+  list(
+    marker: [•],
+    indent: 0.5em,
+    ..exp.highlights.map(h => [#h])
+  )
+}
 
 // Education
 #section-title("Education")
 
-#education-item("University Technical Degree in Web Development", "UNLaM", "2025 – in progress")
-#v(0.2em)
-#education-item("Computer Engineering", "UNLaM", "2021 – paused")
-#v(0.2em)
-#education-item("Computer Science (Secondary)", "Instituto Agustín Elizalde (IAE)", "2014 – 2020")
+#for (i, edu) in data.education.enumerate() {
+  education-item(edu.degree, edu.institution, edu.dates)
+  if i < data.education.len() - 1 {
+    v(0.2em)
+  }
+}
 
 // Open Source & Interests
 #section-title("Open Source & Interests")
@@ -124,8 +125,7 @@
 #list(
   marker: [•],
   indent: 0.5em,
-  [Active on #link("https://github.com/Mattee37")[GitHub] with personal experiments and open-source contributions],
-  [Passionate about: *Comics*, *Open Source*, *Led Zeppelin*, and *Thrash Metal* 🤘],
+  ..data.open_source_interests.map(item => [#item])
 )
 
 // Languages
@@ -135,6 +135,8 @@
   columns: (auto, 1fr),
   column-gutter: 1em,
   row-gutter: 0.4em,
-  text(weight: "bold")[Spanish:], [Native],
-  text(weight: "bold")[English:], [Professional working proficiency],
+  ..data.languages.map(lang => (
+    text(weight: "bold")[#lang.language:],
+    [#lang.proficiency]
+  )).flatten()
 )
