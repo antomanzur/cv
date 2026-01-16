@@ -20,8 +20,8 @@
 #set par(justify: true)
 
 // Custom styles
-#let accent = rgb("#2563eb")
-#let muted = rgb("#64748b")
+#let accent = rgb("#11AF7A")
+#let muted = rgb("#656D79")
 
 #let section-title(title) = {
   v(0.6em)
