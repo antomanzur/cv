@@ -19,7 +19,6 @@
 
 #set par(justify: true)
 
-// Custom styles
 #let accent = rgb("#11AF7A")
 #let muted = rgb("#656D79")
 
